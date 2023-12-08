@@ -1,0 +1,17 @@
+﻿  4.cpp
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(66,11): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(62): message : во время компиляции функции-члена класс шаблон "void Heap<ElementData,IsMoreByValue>::siftDown(int)"
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(99): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Heap<ElementData,IsMoreByValue>::siftDown(int)"
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(35): message : во время компиляции функции-члена класс шаблон "Heap<ElementData,IsMoreByValue>::Heap(Compare)"
+          with
+          [
+              Compare=IsMoreByValue
+          ]
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(125): message : выполняется компиляция ссылки на экземпляр шаблон функции "Heap<ElementData,IsMoreByValue>::Heap(Compare)"
+          with
+          [
+              Compare=IsMoreByValue
+          ]
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(125): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Heap<ElementData,IsMoreByValue>"
+C:\Users\peter\VK Education\ALGS\MODULE1\4\4.cpp(68,12): warning C4018: <: несоответствие типов со знаком и без знака
+  4.vcxproj -> C:\Users\peter\VK Education\ALGS\MODULE1\4\Debug\4.exe

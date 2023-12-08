@@ -1,0 +1,6 @@
+﻿  7.cpp
+C:\Users\peter\VK Education\ALGS\MODULE1\7\7.cpp(15,8): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\peter\VK Education\ALGS\MODULE1\7\7.cpp(48,26): warning C4305: инициализация: усечение из "int" в "char"
+C:\Users\peter\VK Education\ALGS\MODULE1\7\7.cpp(48,17): warning C4309: инициализация: усечение константного значения
+C:\Users\peter\VK Education\ALGS\MODULE1\7\7.cpp(53,21): warning C4018: <: несоответствие типов со знаком и без знака
+  7.vcxproj -> C:\Users\peter\VK Education\ALGS\MODULE1\7\Debug\7.exe

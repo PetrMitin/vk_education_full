@@ -1,0 +1,28 @@
+title Biometry
+
+participant User
+participant steam.org
+participant auth.steam.org
+participant login.steam.org
+
+
+
+participant login.steam.org/biometry.face-recognition
+
+participant biometry.steam.org/user-face-recognition
+User->steam.org:Заходит на сайт\n
+steam.org->auth.steam.org:Проверяет наличие и валидность токена
+auth.steam.org->auth.steam.org:Валидация токена
+auth.steam.org->login.steam.org:Токен невалиден, юзер должен логиниться
+login.steam.org->login.steam.org/biometry.face-recognition:Юзер нажимает "Войти по биометрии (распознавание лица)"
+login.steam.org/biometry.face-recognition->biometry.steam.org/user-face-recognition:Запрос на распознавание со снимком с веб-камеры
+login.steam.org/biometry.face-recognition<-biometry.steam.org/user-face-recognition:Найденные данные о пользователе
+login.steam.org<-login.steam.org/biometry.face-recognition:Авторизация с помощью данных о пользователе
+auth.steam.org<-login.steam.org:Создать и вернуть токен
+steam.org<-auth.steam.org:Вернуть токен валидный, обновленный
+login.steam.org/biometry.face-recognition<-biometry.steam.org/user-face-recognition:Данные о пользователе не найдены
+User<-steam.org:Вернуть контент
+login.steam.org<-login.steam.org/biometry.face-recognition:401 not authorized
+auth.steam.org<-login.steam.org:401 not authorized
+steam.org<-auth.steam.org:401 not authorized
+User<-steam.org:Вернуть сообщение об ошибке

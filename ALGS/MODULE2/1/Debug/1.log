@@ -1,0 +1,17 @@
+﻿  1.cpp
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(184,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(148,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(146): message : во время компиляции функции-члена класс шаблон "void HashTable<std::string,StringHasher>::Grow(void)"
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(86): message : выполняется компиляция ссылки на экземпляр шаблон функции "void HashTable<std::string,StringHasher>::Grow(void)"
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(64): message : во время компиляции функции-члена класс шаблон "HashTable<std::string,StringHasher>::HashTable(int,const H &)"
+          with
+          [
+              H=StringHasher
+          ]
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(202): message : выполняется компиляция ссылки на экземпляр шаблон функции "HashTable<std::string,StringHasher>::HashTable(int,const H &)"
+          with
+          [
+              H=StringHasher
+          ]
+C:\Users\peter\VK Education\ALGS\MODULE2\1\1.cpp(202): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "HashTable<std::string,StringHasher>"
+  1.vcxproj -> C:\Users\peter\VK Education\ALGS\MODULE2\1\Debug\1.exe

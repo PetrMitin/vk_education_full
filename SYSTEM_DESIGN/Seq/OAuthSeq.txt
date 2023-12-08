@@ -1,0 +1,30 @@
+title Google OAuth2
+
+participant User
+participant steam.org
+participant auth.steam.org
+participant login.steam.org
+
+
+participant register.steam.org
+participant auth.steam/google-auth
+
+participant accounts.google.com/o/oauth2/auth
+participant accoutns.google.com
+User->steam.org:Заходит на сайт\n
+steam.org->auth.steam.org:Проверяет наличие и валидность токена
+auth.steam.org->auth.steam.org:Валидация токена
+auth.steam.org->login.steam.org:Токен невалиден, юзер должен логиниться
+login.steam.org->register.steam.org:Юзер переходит на страницу регистрации
+register.steam.org->auth.steam/google-auth:Юзер нажимает "Sign in with Google"
+login.steam.org->auth.steam/google-auth:Юзер нажимает "Login with Google"
+auth.steam/google-auth->accounts.google.com/o/oauth2/auth:запрос токена google
+auth.steam/google-auth<-accounts.google.com/o/oauth2/auth:Google OAuth2 возвращает гугловский токен
+auth.steam/google-auth->accoutns.google.com:запрос сведений о юзере
+auth.steam/google-auth<-accoutns.google.com:Сведения о юзере
+register.steam.org<-auth.steam/google-auth:сведения о юзере
+login.steam.org<-auth.steam/google-auth:сведения о юзере
+auth.steam.org<-register.steam.org:регистрация пользователя с последующей выдачей токена steam
+auth.steam.org<-login.steam.org:авторизация пользователя с последующей выдачей токена steam
+steam.org<-auth.steam.org:Вернуть токен валидный, обновленный
+User<-steam.org:Вернуть контент
